@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_taille"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Votre taille (en cm)"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_homme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Homme" />
+
+        <RadioButton
+            android:id="@+id/rb_femme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Femme" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/tv_formule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choisir la formule"
+            app:simpleItems="@array/formules" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_calculer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="Calculer" />
+
+    <TextView
+        android:id="@+id/tv_resultat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Votre poids idéal est 72 Kg." />
+</LinearLayout>

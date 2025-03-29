@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Poid Ideal App</string>
+    <string-array name="formules">
+        <item>Formule Broca</item>
+        <item>Formule Lorentz</item>
+    </string-array>
+</resources>
